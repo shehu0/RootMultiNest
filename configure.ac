@@ -1,0 +1,30 @@
+AC_PREREQ([2.59])
+AC_INIT([MNP], [0.1], [], [HEPfit], [hepfit.roma1.infn.it])
+AC_CONFIG_AUX_DIR([Config])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_HEADERS([Config/config.h])
+
+AM_INIT_AUTOMAKE
+AM_PROG_AR
+
+AC_LANG(C++)
+AM_INIT_AUTOMAKE([1.10 -Wall -Werror no-define])
+LT_INIT
+
+
+AC_PROG_CC([gcc])
+AC_PROG_CXX([g++])
+AC_PROG_F77
+AC_F77_LIBRARY_LDFLAGS
+
+ROOT_PATH(3.03/05, AC_DEFUN([HAVE_ROOT]), AC_MSG_ERROR(ROOT is not found or version is too old))
+MULTINEST_PATH
+
+AC_SUBST(MN_LIBS)
+
+AC_SUBST([MNP_SO_VERSION], [0:1:0])
+AC_SUBST([MNP_API_VERSION], [0.1])
+
+AC_CONFIG_FILES([Makefile])
+
+AC_OUTPUT
