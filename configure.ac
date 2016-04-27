@@ -1,5 +1,5 @@
 AC_PREREQ([2.59])
-AC_INIT([MNP], [0.1], [], [HEPfit], [hepfit.roma1.infn.it])
+AC_INIT([RootMultiNestPlugin], [1.0], [], [], [hepfit.roma1.infn.it])
 AC_CONFIG_AUX_DIR([Config])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([Config/config.h])
@@ -22,8 +22,8 @@ MULTINEST_PATH
 
 AC_SUBST(MN_LIBS)
 
-AC_SUBST([MNP_SO_VERSION], [0:1:0])
-AC_SUBST([MNP_API_VERSION], [0.1])
+AC_SUBST([MNP_SO_VERSION], [1:0:0])
+AC_SUBST([MNP_API_VERSION], [1.0])
 
 AC_CONFIG_FILES([Makefile])
 
