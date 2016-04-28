@@ -1,3 +1,8 @@
+This package is a GNU build for MultiNest plugin to
+ROOT by RooStats developers. See
+https://github.com/svenkreiss/roostats/wiki/MultiNest-in-ROOT
+
+
 Download MultiNest from:
    http://ccpforge.cse.rl.ac.uk/gf/project/multinest/
 
@@ -6,6 +11,12 @@ You might need to change the Makefile with the following suggestions:
    FFLAGS += -O3 -ffree-line-length-none -I/usr/local/include
    CFLAGS += -O3
 
+
+To compile, it is needed to set root v6 and multinest library directories
+e.g.
+--with-multinest-libdir=pathToYourMultiNestDirectoryWhereLibNest3Is
+
 ./configure --help 
-   --with-multinest-libdir=pathToYourMultiNestDirectoryWhereLibNest3Is
+
+and then ./configure; make; make install
 
