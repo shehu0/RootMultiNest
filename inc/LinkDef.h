@@ -21,5 +21,7 @@
 
 #pragma link C++ class RooStats::TMultiNest+;
 #pragma link C++ class RooStats::MultiNest+;
+#pragma link C++ class RooStats::MultiNestCalculator+;
+#pragma link C++ class RooStats::MultiNestInterface+;
 
 #endif

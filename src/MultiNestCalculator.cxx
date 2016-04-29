@@ -214,6 +214,14 @@ MultiNestInterval* MultiNestCalculator::GetInterval() const
    }
    cout << endl;
 
+   //rootdev/etc/plugins/RooStats@@MultiNestInterface/P010_MultiNest.C
+   // https://root.cern.ch/doc/master/classTPluginManager.html
+   // https://root.cern.ch/root/html/src/TPluginHandler.cxx.html
+   gPluginMgr->AddHandler("RooStats::MultiNestInterface",
+			  "MultiNest",
+			  "RooStats::MultiNest",
+			  "MultiNestPlugin",
+			  "MultiNest( )");
 
    TPluginHandler *h = NULL;
    MultiNestInterface *m = NULL;
